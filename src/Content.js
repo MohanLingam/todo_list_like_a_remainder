@@ -1707,9 +1707,9 @@ const Content = ({ items, handleDelete }) => {
 
                                     <div className="cord-bottom">
                                         <form action="">
-                                            <label htmlFor="">To</label>
-                                            <input type="time" value={startTime} onChange={(e) => setStartTime(e.target.value)} />
-                                            <label htmlFor="End">End</label>
+                                            <label htmlFor="">To: </label>
+                                            <input type="time" value={startTime} onChange={(e) => setStartTime(e.target.value)} />  
+                                            <label htmlFor="End">End: </label>
                                             <input type="time" value={endTime} onChange={(e) => setEndTime(e.target.value)} />
                                             <h3>{status}</h3>
                                             {timeLeft && (
