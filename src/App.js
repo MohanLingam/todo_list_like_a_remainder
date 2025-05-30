@@ -1,11 +1,16 @@
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import Content from "./Content";
 import Header from "./Header";
 import { useState } from 'react';
 
 function App() {
 
-  const [items, setItems] = useState(JSON.parse(localStorage.getItem('todo_list')));
+  const [items, setItems] = useState([]);
+
+  useEffect (() =>{
+    JSON.parse(localStorage.getItem('todo_list'))
+  },[])
+
 
   const [newItem, setNewItem] = useState('')
 
