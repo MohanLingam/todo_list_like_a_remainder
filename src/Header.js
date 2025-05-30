@@ -29,7 +29,7 @@ const Header = ({newItem,setNewItem,handleSubmit}) => {
     <header >
       <div className="left" ref={opacity}>
         <div className="img"><LuListTodo /></div>
-        <h1>To do list like a Remider</h1>
+        <h1>To do list like a Remainder</h1>
       </div>
       <button className='head-btn' id='headBtn' onClick={() => change()} ref={opacity2}>Add list</button>
 
