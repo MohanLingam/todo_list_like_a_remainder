@@ -5,24 +5,7 @@ import { useState } from 'react';
 
 function App() {
 
-  const [items, setItems] = useState(
-    [
-      { id: 1,
-         checked: false,
-          item: "i did it",
-         },
- 
-      { id: 2, 
-        checked: false, 
-        item: "Resume task complition" 
-      },
- 
-      { id: 3,
-         checked: false,
-          item: "Make queck a prosses " 
-        }
-    ]
-  );
+  const [items, setItems] = useState(JSON.parse(localStorage.getItem('todo_list')));
 
   const [newItem, setNewItem] = useState('')
 
