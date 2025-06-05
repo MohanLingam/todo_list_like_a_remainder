@@ -1563,12 +1563,12 @@ function App() {
         }
     ]
 
-  const [items, setItems] = useState(JSON.parse(localStorage.getItem('todo_list')));
+  const [items, setItems] = useState([]);
   
 
-//   useEffect (() =>{
-//     JSON.parse(localStorage.getItem('todo_list'))
-//   },[])
+  useEffect (() =>{
+    JSON.parse(localStorage.getItem('todo_list'))
+  },[])
 
 
   const [newItem, setNewItem] = useState('')
