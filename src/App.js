@@ -1630,6 +1630,7 @@ useEffect(() => {
   // }
 
   const handleDelete = (id) => {
+    id.preventDefault()
     const listItems = items.filter((item) => item.id !== id)
     setItems(listItems)
     localStorage.setItem("todo_list", JSON.stringify(listItems))
@@ -1650,6 +1651,7 @@ useEffect(() => {
         handleDelete={handleDelete}
         updateItem={updateItem}
         addItem ={addItem }
+        quotes={quotes}
       />
     </div>
   );
