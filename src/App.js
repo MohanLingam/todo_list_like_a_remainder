@@ -1620,7 +1620,6 @@ useEffect(() => {
   const handleSubmit = (e) => {
     e.preventDefault()
     setNewItem(e.target.value)
-    console.log('submitted')
     addItem(newItem)
     setNewItem('')
   }
