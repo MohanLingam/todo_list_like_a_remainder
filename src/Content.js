@@ -175,7 +175,6 @@ const Content = ({ items, updateItem, handleDelete,quotes }) => {
 
         <div className="content-content">
           {items.map((item) => (
-
             <div className="cord" key={item.id}>
               <div className="cord-top">
                 <h3>{item.item}</h3>
