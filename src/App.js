@@ -1599,6 +1599,15 @@ function App() {
 }, []);
 
 useEffect(() => {
+  const storedItems = JSON.parse(localStorage.getItem('todo_list')) || [];
+  const sanitizedItems = storedItems.map(item => ({
+    ...item,
+    quote: item.quote || quotes[Math.floor(Math.random() * quotes.length)]
+  }));
+  setItems(sanitizedItems);
+}, []);
+
+useEffect(() => {
   const interval = setInterval(() => {
     setItems(prevItems =>
       prevItems.map(item => {
@@ -1610,9 +1619,6 @@ useEffect(() => {
 
   return () => clearInterval(interval); // Cleanup on unmount
 }, []);
-
-
-
 
 
 
