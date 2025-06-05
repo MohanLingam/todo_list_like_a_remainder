@@ -1563,7 +1563,7 @@ function App() {
         }
     ]
 
-  const [items, setItems] = useState([]);
+  const [items, setItems] = useState(JSON.parse(localStorage.getItem('todo_list')));
   
 
   useEffect (() =>{
@@ -1609,7 +1609,7 @@ useEffect(() => {
   }, 30000); // 1 minute
 
   return () => clearInterval(interval); // Cleanup on unmount
-}, [quotes]);
+}, []);
 
 
 
