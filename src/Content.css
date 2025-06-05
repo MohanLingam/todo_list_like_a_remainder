@@ -181,6 +181,13 @@
     cursor: pointer;
 }
 
+.end{
+    margin-right: 2px;
+}
+.end2{
+    margin-right: 18px;
+}
+
 .form2 input::after {
     content: '';
     position: absolute;

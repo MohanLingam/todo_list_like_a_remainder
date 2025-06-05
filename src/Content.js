@@ -188,10 +188,10 @@ const Content = ({ items, updateItem ,handleDelete  }) => {
 
                                     <div className="cord-bottom">
                                         <form action="">
-                                            <label htmlFor="">To: </label>
-                                            <input type="time" value={item.startTime}  onChange={e => updateItem(item.id, { startTime: e.target.value })} />  
-                                            <label htmlFor="End">End: </label>
-                                            <input type="time" value={item.endTime}onChange={e => updateItem(item.id, { endTime: e.target.value })} />
+                                            <label htmlFor="">To:  </label>
+                                            <input type="time" value={item.startTime}  onChange={e => updateItem(item.id, { startTime: e.target.value })} />  <br />
+                                            <label htmlFor="End" className='end'>End: </label>
+                                            <input type="time" value={item.endTime}onChange={e => updateItem(item.id, { endTime: e.target.value })} className='end2'/>
                                             <h3>{item.status}</h3>
                                              
           {item.timeLeft && <p>{item.timeLeft.hours}:{item.timeLeft.minutes}:{item.timeLeft.seconds}</p>}
