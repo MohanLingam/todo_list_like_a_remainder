@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/todo_list_like_a_remainder/static/css/main.4dabf00e.css",
+    "main.js": "/todo_list_like_a_remainder/static/js/main.460a1d6e.js",
+    "index.html": "/todo_list_like_a_remainder/index.html",
+    "main.4dabf00e.css.map": "/todo_list_like_a_remainder/static/css/main.4dabf00e.css.map",
+    "main.460a1d6e.js.map": "/todo_list_like_a_remainder/static/js/main.460a1d6e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4dabf00e.css",
+    "static/js/main.460a1d6e.js"
+  ]
+}
