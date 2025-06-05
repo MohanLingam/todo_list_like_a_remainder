@@ -1609,7 +1609,7 @@ useEffect(() => {
   }, 30000); // 1 minute
 
   return () => clearInterval(interval); // Cleanup on unmount
-}, []);
+}, [quotes]);
 
 
 
