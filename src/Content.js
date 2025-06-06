@@ -178,7 +178,7 @@ const Content = ({ items, updateItem, handleDelete,quotes }) => {
             <div className="cord" key={item.id}>
               <div className="cord-top">
                 <h3>{item.item}</h3>
-                <p id='quoteChange'>"Quotes" {item.quote?.quote || "No quote available"}</p>
+                <p id='quoteChange'>"Quotes" {item.quote && item.quote.quote ? item.quote.quote : "No quote available"}</p>
                 <div className="color">
                   <button className="color1"></button>
                   <button className="color2"></button>
