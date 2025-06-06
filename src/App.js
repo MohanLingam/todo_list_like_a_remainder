@@ -13,6 +13,8 @@ function App() {
     JSON.parse(localStorage.getItem('todo_list'))
   },[])
 
+  
+
   let storedItems = [];
 try {
   const parsed = JSON.parse(localStorage.getItem('todo_list'));

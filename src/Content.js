@@ -1733,7 +1733,7 @@ const Content = ({ items, handleDelete,updateItem }) => {
         </div>
 
         <div className="content-content">
-          {items && items.map((item) => (
+          {items?.map((item) => (
 
             <div className="cord" key={item.id}>
               <div className="cord-top">
