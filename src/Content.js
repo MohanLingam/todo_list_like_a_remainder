@@ -186,8 +186,8 @@ const Content = ({ items, updateItem, handleDelete,quotes }) => {
                 </div>
 
                 <div className="cord-bottom">
-                  <form action="">
-                    <label htmlFor="">To:  </label>
+                  <form action="#">
+                    <label htmlFor="To">To:  </label>
                     <input type="time" value={item.startTime} onChange={e => updateItem(item.id, { startTime: e.target.value })} />  <br />
                     <label htmlFor="End" className='end'>End: </label>
                     <input type="time" value={item.endTime} onChange={e => updateItem(item.id, { endTime: e.target.value })} className='end2' />

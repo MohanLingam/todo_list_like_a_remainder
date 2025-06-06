@@ -1563,14 +1563,26 @@ function App() {
         }
     ]
 
-  const [items, setItems] = useState(() =>{
-    const storedItems = JSON.parse(localStorage.getItem('todo_list')) || [];
-  const sanitizedItems = storedItems.map(item => ({
-    ...item,
-    quote: item.quote || quotes[Math.floor(Math.random() * quotes.length)]
-  }));
-  return sanitizedItems;
-});
+  const [items, setItems] = useState(
+    [
+      { id: 1,
+         checked: false,
+          item: "i did it",
+          quote: ''
+         },
+ 
+      { id: 2, 
+        checked: false, 
+        item: "Resume task complition" ,
+        quote: ''
+      },
+ 
+      { id: 3,
+         checked: false,
+          item: "Make queck a prosses " ,
+          quote: ''
+        }
+    ]);
 
 
 
