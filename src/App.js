@@ -6,7 +6,7 @@ import { useCallback } from "react";
 
 
 function App() {
-     const [items, setItems] = useState([]);
+     const [items, setItems] = useState(JSON.parse(localStorage.getItem('todo_list')) || []);
   
 
   useEffect (() =>{
