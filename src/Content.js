@@ -1596,7 +1596,7 @@ const Content = ({ items, handleDelete,updateItem }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentQuote(getRandomQuote());
-    }, 60000); // 1 minute (60,000 ms)
+    }, 30000); // 1 minute (60,000 ms)
 
     // Optional: also change the quote once immediately after mount
     setCurrentQuote(getRandomQuote());
@@ -1739,6 +1739,8 @@ const Content = ({ items, handleDelete,updateItem }) => {
               <div className="cord-top">
                 <h3>{item.item}</h3>
                 <p id='quoteChange'>"Quotes" {currentQuote.quote}</p>
+
+
                 <div className="color">
                   <button className="color1"></button>
                   <button className="color2"></button>

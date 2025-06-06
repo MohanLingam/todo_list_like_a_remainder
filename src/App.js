@@ -54,6 +54,30 @@ function App() {
 //     );
 //   }, 30000); // 1 minute
 
+// useEffect(() => {
+//   const storedItems = JSON.parse(localStorage.getItem('todo_list')) || [];
+//   const sanitizedItems = storedItems.map(item => ({
+//     ...item,
+//     quote: item.quote || quotes[Math.floor(Math.random() * quotes.length)]
+//   }));
+//   setItems(sanitizedItems);
+//     localStorage.setItem("todo_list", JSON.stringify(sanitizedItems));
+// }, []);
+
+// useEffect(() => {
+//   const interval = setInterval(() => {
+//     setItems(prevItems =>
+//       prevItems.map(item => {
+//         const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+//         return { ...item, quote: randomQuote };
+//       })
+//     );
+//   }, 30000); // 1 minute
+
+//   return () => clearInterval(interval); // Cleanup on unmount
+// }, []);
+
+
 //   return () => clearInterval(interval); // Cleanup on unmount
 // }, []);
 
