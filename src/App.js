@@ -29,7 +29,8 @@ try {
 //   const opacity = useRef()
 
   const addItem = (item) => {
-    const id = items.length ? items[items.length - 1].id + 1 : 1;
+    const id = Array.isArray(items) && items.length ? items[items.length - 1].id + 1 : 1;
+
     const addNewItem = { id, checked: false, item }
     const listItems = [...items, addNewItem]
     // const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
@@ -96,10 +97,9 @@ try {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    setNewItem(e.target.value)
-    console.log('submitted')
-    addItem(newItem)
-    setNewItem('')
+    if (!newItem.trim()) return;
+  addItem(newItem);
+  setNewItem('');
   }
 
   // const handleCheck = (id) => {
