@@ -1625,6 +1625,7 @@ useEffect(() => {
     quote: item.quote || quotes[Math.floor(Math.random() * quotes.length)]
   }));
   setItems(sanitizedItems);
+    localStorage.setItem("todo_list", JSON.stringify(sanitizedItems));
 }, []);
 
 useEffect(() => {
