@@ -1563,8 +1563,16 @@ function App() {
         }
     ]
 
-  const [items, setItems] = useState(JSON.parse(localStorage.getItem('todo_list')));
-  
+  const [items, setItems] = useState(() =>{
+    const storedItems = JSON.parse(localStorage.getItem('todo_list')) || [];
+  const sanitizedItems = storedItems.map(item => ({
+    ...item,
+    quote: item.quote || quotes[Math.floor(Math.random() * quotes.length)]
+  }));
+  return sanitizedItems;
+});
+
+
 
   useEffect (() =>{
     JSON.parse(localStorage.getItem('todo_list'))
